@@ -3,10 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Cami Roa</title>
+    <title>Cami Roa — Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">CR</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-greeting">Hola, soy</p>
+                    <h1 class="hero-name">Cami Roa</h1>
+                    <h2 class="hero-title">Diseñadora & Desarrolladora Frontend</h2>
+                    <p class="hero-description">
+                        Creo experiencias digitales elegantes, accesibles y centradas en el usuario.
+                        Especializada en React, TypeScript y sistemas de diseño.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+                        <a href="#contact" class="btn btn-secondary">Contactar</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="#" aria-label="GitHub">GitHub</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Email">Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Con más de 5 años de experiencia construyendo interfaces web,
+                            me apasiona la intersección entre diseño y código.
+                        </p>
+                        <p>
+                            Mi enfoque combina estética cuidada con rendimiento técnico:
+                            accesibilidad (WCAG 2.1), performance (Core Web Vitals),
+                            y arquitectura escalable con componentes reutilizables.
+                        </p>
+                        <p>
+                            Actualmente lidero el frontend en <strong>Studio Digital</strong>,
+                            donde mantengo un design system usado por 12+ productos.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Años experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Proyectos entregados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Productos en design system</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Proyectos destacados</h2>
+                    <a href="#" class="link">Ver todos →</a>
+                </header>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div>
+                        <div class="project-content">
+                            <span class="project-tag">SaaS</span>
+                            <h3 class="project-title">Dashboard Analytics</h3>
+                            <p class="project-description">Plataforma de visualización de datos en tiempo real con gráficos interactivos y exportación avanzada.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link">Ver caso de estudio →</a>
+                                <a href="#" class="link">GitHub →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"></div>
+                        <div class="project-content">
+                            <span class="project-tag">E-commerce</span>
+                            <h3 class="project-title">Marketplace Moda</h3>
+                            <p class="project-description">Experiencia de compra completa con carrito persistente, pagos Stripe y panel de vendedores.</p>
+                            <div class="project-tech">
+                                <span>Next.js</span>
+                                <span>Prisma</span>
+                                <span>PostgreSQL</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link">Ver caso de estudio →</a>
+                                <a href="#" class="link">Demo →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"></div>
+                        <div class="project-content">
+                            <span class="project-tag">Design System</span>
+                            <h3 class="project-title">Component Library</h3>
+                            <p class="project-description">Biblioteca de 60+ componentes accesibles, documentada con Storybook y tests visuales automatizados.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Storybook</span>
+                                <span>Chromatic</span>
+                                <span>Testing Library</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link">Ver documentación →</a>
+                                <a href="#" class="link">NPM Package →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul class="skill-list">
+                            <li><span class="skill-name">React / Next.js</span><span class="skill-level">Experto</span></li>
+                            <li><span class="skill-name">TypeScript</span><span class="skill-level">Experto</span></li>
+                            <li><span class="skill-name">Vue / Nuxt</span><span class="skill-level">Avanzado</span></li>
+                            <li><span class="skill-name">CSS / Tailwind</span><span class="skill-level">Experto</span></li>
+                            <li><span class="skill-name">Animations (Framer Motion)</span><span class="skill-level">Avanzado</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Herramientas & Procesos</h3>
+                        <ul class="skill-list">
+                            <li><span class="skill-name">Git / GitHub Actions</span><span class="skill-level">Experto</span></li>
+                            <li><span class="skill-name">Figma / Design Systems</span><span class="skill-level">Avanzado</span></li>
+                            <li><span class="skill-name">Testing (Vitest, Playwright)</span><span class="skill-level">Avanzado</span></li>
+                            <li><span class="skill-name">Performance / Lighthouse</span><span class="skill-level">Avanzado</span></li>
+                            <li><span class="skill-name">Accesibilidad (WCAG 2.1)</span><span class="skill-level">Experto</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend & DevOps</h3>
+                        <ul class="skill-list">
+                            <li><span class="skill-name">Node.js / Express</span><span class="skill-level">Intermedio</span></li>
+                            <li><span class="skill-name">PostgreSQL / Prisma</span><span class="skill-level">Intermedio</span></li>
+                            <li><span class="skill-name">Docker / Vercel / AWS</span><span class="skill-level">Intermedio</span></li>
+                            <li><span class="skill-name">GraphQL / REST APIs</span><span class="skill-level">Avanzado</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Trabajemos juntos</h2>
+                <p class="contact-intro">
+                    Estoy disponible para proyectos freelance, consultoría o charlas técnicas.
+                    Escríbeme y cuéntame tu idea.
+                </p>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </form>
+                <p class="contact-alt">O escríbeme directo a <a href="mailto:hola@camiroa.dev">hola@camiroa.dev</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cami Roa. Construido con cuidado.</p>
+            <nav class="footer-nav">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
