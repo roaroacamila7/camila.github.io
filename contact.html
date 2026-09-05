@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Cami Roa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">CR</a>
+            <ul class="nav-links">
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="skills.html">Habilidades</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-page">
+            <div class="container">
+                <p class="hero-greeting">Hablemos</p>
+                <h1 class="hero-name">Contacto</h1>
+                <p class="hero-description">
+                    Tienes un proyecto en mente, una pregunta técnica o solo quieres saludar.
+                    Respondo en 24-48h laborables.
+                </p>
+            </div>
+        </section>
+
+        <section class="section contact-full">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-wrapper">
+                        <h2 class="section-title">Escríbeme</h2>
+                        <form class="contact-form" id="contact-form" action="#" method="POST">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nombre *</label>
+                                    <input type="text" id="name" name="name" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="project">Proyecto freelance / contrato</option>
+                                    <option value="consulting">Consultoría técnica / arquitectura</option>
+                                    <option value="speaking">Charla / taller / conferencia</option>
+                                    <option value="mentoring">Mentoría / code review</option>
+                                    <option value="job">Oportunidad full-time</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Presupuesto estimado (opcional)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">No especificar</option>
+                                    <option value="under-5k">< 5.000€</option>
+                                    <option value="5k-15k">5.000€ - 15.000€</option>
+                                    <option value="15k-30k">15.000€ - 30.000€</option>
+                                    <option value="30k-50k">30.000€ - 50.000€</option>
+                                    <option value="over-50k">> 50.000€</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeline">Timeline (opcional)</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">No especificar</option>
+                                    <option value="asap">Yesterday 🚀</option>
+                                    <option value="1-month">1 mes</option>
+                                    <option value="3-months">3 meses</option>
+                                    <option value="6-months">6 meses</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Cuéntame tu proyecto, reto o idea..."></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">He leído y acepto la <a href="#">política de privacidad</a> *</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                                <span class="btn-text">Enviar mensaje</span>
+                                <span class="btn-loading" style="display:none">Enviando...</span>
+                            </button>
+                            <p class="form-note">También puedes escribirme directo a <a href="mailto:hola@camiroa.dev">hola@camiroa.dev</a></p>
+                        </form>
+
+                        <div class="form-status" id="form-status" style="display:none" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <aside class="contact-info">
+                        <div class="info-card">
+                            <h3>Disponibilidad</h3>
+                            <div class="availability-status">
+                                <span class="status-indicator available"></span>
+                                <span>Disponible para nuevos proyectos</span>
+                            </div>
+                            <p class="availability-note">Próxima disponibilidad: <strong>Inmediata</strong></p>
+                            <ul class="availability-details">
+                                <li>✅ Freelance / Contrato</li>
+                                <li>✅ Consultoría técnica</li>
+                                <li>✅ Mentoría (1-2 plazas/mes)</li>
+                                <li>✅ Charlas / Talleres</li>
+                                <li>⚠️ Full-time: solo roles senior/lead</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Cómo trabajo</h3>
+                            <ol class="process-steps">
+                                <li>
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Primera llamada (30min)</strong>
+                                        <p>Entiendo tu problema, alcance y expectativas. Sin compromiso.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Propuesta técnica</strong>
+                                        <p>Arquitectura, stack, timeline, hitos y presupuesto detallado.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <strong>Kickoff & setup</strong>
+                                        <p>Repo, CI/CD, design system base, conventions. Empezamos a construir.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-number">4</span>
+                                    <div>
+                                        <strong>Entregas iterativas</strong>
+                                        <p>Sprints de 1-2 semanas, demos, feedback, deploy continuo.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-number">5</span>
+                                    <div>
+                                        <strong>Handoff & docs</strong>
+                                        <p>Código documentado, Storybook, runbooks, formación al equipo.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Enlaces directos</h3>
+                            <ul class="direct-links">
+                                <li>
+                                    <a href="mailto:hola@camiroa.dev">
+                                        <span class="link-icon">📧</span>
+                                        <span>hola@camiroa.dev</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://calendly.com/camiroa/30min" target="_blank" rel="noopener">
+                                        <span class="link-icon">📅</span>
+                                        <span>Agendar llamada (Calendly)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/camiroa" target="_blank" rel="noopener">
+                                        <span class="link-icon">💻</span>
+                                        <span>GitHub</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/in/camiroa" target="_blank" rel="noopener">
+                                        <span class="link-icon">💼</span>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/camiroa" target="_blank" rel="noopener">
+                                        <span class="link-icon">🐦</span>
+                                        <span>Twitter / X</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card faq-card">
+                            <h3>Preguntas frecuentes</h3>
+                            <details class="faq-item">
+                                <summary>¿Cuál es tu tarifa?</summary>
+                                <p>Depende del proyecto. Freelance: 80-120€/hora o precio fijo por entregable. Consultoría: 150€/hora. Mentoría: 100€/sesión. Hablemos y te doy presupuesto exacto.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>¿Trabajas en remoto?</summary>
+                                <p>100% remoto desde Madrid (CET). Experiencia con equipos distribuidos globales (US, LATAM, EU). Herramientas: Linear, Notion, Slack, Loom, GitHub.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>¿Firmas NDA?</summary>
+                                <p>Sí, sin problema. Tengo mi plantilla estándar o firmo la tuya.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>¿Qué stack usas por defecto?</summary>
+                                <p>React + TypeScript + Tailwind + Vite/Next.js + Vitest + Playwright + Storybook. Pero me adapto a tu stack actual: Vue, Svelte, Astro, legacy, lo que sea.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>¿Haces solo frontend?</summary>
+                                <p>Frontend es mi especialidad, pero hago full-stack cuando el proyecto lo requiere (Node.js, PostgreSQL, GraphQL, AWS). Para backends complejos, colaboro con backend specialists.</p>
+                            </details>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cami Roa. Construido con cuidado.</p>
+            <nav class="footer-nav">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            // Basic validation
+            if (!data.name || !data.email || !data.subject || !data.message || !data.privacy) {
+                showStatus('Por favor completa todos los campos requeridos.', 'error');
+                return;
+            }
+
+            // Email validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+                showStatus('Email inválido.', 'error');
+                return;
+            }
+
+            setLoading(true);
+
+            // Simulate API call
+            await new Promise(r => setTimeout(r, 1500));
+
+            // Success (in real app, send to Formspree, Netlify Forms, or your backend)
+            showStatus('¡Mensaje enviado! Te responderé en 24-48h.', 'success');
+            form.reset();
+            setLoading(false);
+        });
+
+        function setLoading(loading) {
+            submitBtn.disabled = loading;
+            btnText.style.display = loading ? 'none' : 'inline';
+            btnLoading.style.display = loading ? 'inline' : 'none';
+        }
+
+        function showStatus(message, type) {
+            status.textContent = message;
+            status.className = 'form-status ' + type;
+            status.style.display = 'block';
+            status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
