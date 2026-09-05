@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <nav class="nav container">
-            <a href="index.html" class="logo">CR</a>
+            <a href="index.html" class="logo">Cami Roa</a>
             <ul class="nav-links">
                 <li><a href="about.html">Sobre mí</a></li>
                 <li><a href="projects.html">Proyectos</a></li>
@@ -22,12 +22,9 @@
     <main>
         <section class="hero hero-page">
             <div class="container">
-                <p class="hero-greeting">Hablemos</p>
-                <h1 class="hero-name">Contacto</h1>
-                <p class="hero-description">
-                    Tienes un proyecto en mente, una pregunta técnica o solo quieres saludar.
-                    Respondo en 24-48h laborables.
-                </p>
+                <p class="hero-greeting">CONTACTO</p>
+                <h1 class="hero-name">Hablemos de tu proyecto.</h1>
+                <p class="hero-description">¿Tienes un negocio, una idea o simplemente quieres mejorar tu presencia online? Estoy a un mensaje de distancia.</p>
             </div>
         </section>
 
@@ -35,65 +32,23 @@
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-form-wrapper">
-                        <h2 class="section-title">Escríbeme</h2>
                         <form class="contact-form" id="contact-form" action="#" method="POST">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Nombre *</label>
-                                    <input type="text" id="name" name="name" required autocomplete="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required autocomplete="email">
-                                </div>
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Asunto *</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Selecciona...</option>
-                                    <option value="project">Proyecto freelance / contrato</option>
-                                    <option value="consulting">Consultoría técnica / arquitectura</option>
-                                    <option value="speaking">Charla / taller / conferencia</option>
-                                    <option value="mentoring">Mentoría / code review</option>
-                                    <option value="job">Oportunidad full-time</option>
-                                    <option value="other">Otro</option>
-                                </select>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="budget">Presupuesto estimado (opcional)</label>
-                                <select id="budget" name="budget">
-                                    <option value="">No especificar</option>
-                                    <option value="under-5k">< 5.000€</option>
-                                    <option value="5k-15k">5.000€ - 15.000€</option>
-                                    <option value="15k-30k">15.000€ - 30.000€</option>
-                                    <option value="30k-50k">30.000€ - 50.000€</option>
-                                    <option value="over-50k">> 50.000€</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="timeline">Timeline (opcional)</label>
-                                <select id="timeline" name="timeline">
-                                    <option value="">No especificar</option>
-                                    <option value="asap">Yesterday 🚀</option>
-                                    <option value="1-month">1 mes</option>
-                                    <option value="3-months">3 meses</option>
-                                    <option value="6-months">6 meses</option>
-                                    <option value="flexible">Flexible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mensaje *</label>
-                                <textarea id="message" name="message" rows="6" required placeholder="Cuéntame tu proyecto, reto o idea..."></textarea>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="privacy" name="privacy" required>
-                                <label for="privacy">He leído y acepto la <a href="#">política de privacidad</a> *</label>
+                                <label for="message">Cuéntame sobre tu proyecto</label>
+                                <textarea id="message" name="message" rows="5" placeholder="¿Qué tienes en mente?" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
                                 <span class="btn-text">Enviar mensaje</span>
                                 <span class="btn-loading" style="display:none">Enviando...</span>
                             </button>
-                            <p class="form-note">También puedes escribirme directo a <a href="mailto:hola@camiroa.dev">hola@camiroa.dev</a></p>
                         </form>
 
                         <div class="form-status" id="form-status" style="display:none" role="alert" aria-live="polite"></div>
@@ -101,93 +56,58 @@
 
                     <aside class="contact-info">
                         <div class="info-card">
-                            <h3>Disponibilidad</h3>
-                            <div class="availability-status">
-                                <span class="status-indicator available"></span>
-                                <span>Disponible para nuevos proyectos</span>
-                            </div>
-                            <p class="availability-note">Próxima disponibilidad: <strong>Inmediata</strong></p>
-                            <ul class="availability-details">
-                                <li>✅ Freelance / Contrato</li>
-                                <li>✅ Consultoría técnica</li>
-                                <li>✅ Mentoría (1-2 plazas/mes)</li>
-                                <li>✅ Charlas / Talleres</li>
-                                <li>⚠️ Full-time: solo roles senior/lead</li>
-                            </ul>
-                        </div>
-
-                        <div class="info-card">
-                            <h3>Cómo trabajo</h3>
-                            <ol class="process-steps">
+                            <h3>¿Qué pasa después?</h3>
+                            <ol class="process-steps-contact">
                                 <li>
                                     <span class="step-number">1</span>
                                     <div>
-                                        <strong>Primera llamada (30min)</strong>
-                                        <p>Entiendo tu problema, alcance y expectativas. Sin compromiso.</p>
+                                        <strong>Te respondo en 24-48h</strong>
+                                        <p>Leo tu mensaje y te escribo para agendar una llamada corta (15-20 min).</p>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="step-number">2</span>
                                     <div>
-                                        <strong>Propuesta técnica</strong>
-                                        <p>Arquitectura, stack, timeline, hitos y presupuesto detallado.</p>
+                                        <strong>Hablamos de tu proyecto</strong>
+                                        <p>Me cuentas qué necesitas, tus objetivos y resolvemos dudas.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="step-number">3</span>
                                     <div>
-                                        <strong>Kickoff & setup</strong>
-                                        <p>Repo, CI/CD, design system base, conventions. Empezamos a construir.</p>
+                                        <strong>Te envío propuesta</strong>
+                                        <p>Con alcance, timeline, precio y próximos pasos. Sin compromiso.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="step-number">4</span>
                                     <div>
-                                        <strong>Entregas iterativas</strong>
-                                        <p>Sprints de 1-2 semanas, demos, feedback, deploy continuo.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="step-number">5</span>
-                                    <div>
-                                        <strong>Handoff & docs</strong>
-                                        <p>Código documentado, Storybook, runbooks, formación al equipo.</p>
+                                        <strong>Empezamos</strong>
+                                        <p>Si todo encaja, firmamos y arrancamos con la fase de descubrimiento.</p>
                                     </div>
                                 </li>
                             </ol>
                         </div>
 
                         <div class="info-card">
-                            <h3>Enlaces directos</h3>
+                            <h3>Datos de contacto directo</h3>
                             <ul class="direct-links">
                                 <li>
-                                    <a href="mailto:hola@camiroa.dev">
-                                        <span class="link-icon">📧</span>
-                                        <span>hola@camiroa.dev</span>
+                                    <a href="mailto:hola@camiroa.com">
+                                        <span class="link-icon">✉️</span>
+                                        <span>hola@camiroa.com</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://calendly.com/camiroa/30min" target="_blank" rel="noopener">
-                                        <span class="link-icon">📅</span>
-                                        <span>Agendar llamada (Calendly)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/camiroa" target="_blank" rel="noopener">
-                                        <span class="link-icon">💻</span>
-                                        <span>GitHub</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/in/camiroa" target="_blank" rel="noopener">
+                                    <a href="https://www.linkedin.com/in/camiroa" target="_blank" rel="noopener">
                                         <span class="link-icon">💼</span>
                                         <span>LinkedIn</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/camiroa" target="_blank" rel="noopener">
-                                        <span class="link-icon">🐦</span>
-                                        <span>Twitter / X</span>
+                                    <a href="https://www.instagram.com/camiroa" target="_blank" rel="noopener">
+                                        <span class="link-icon">📷</span>
+                                        <span>Instagram</span>
                                     </a>
                                 </li>
                             </ul>
@@ -196,24 +116,28 @@
                         <div class="info-card faq-card">
                             <h3>Preguntas frecuentes</h3>
                             <details class="faq-item">
-                                <summary>¿Cuál es tu tarifa?</summary>
-                                <p>Depende del proyecto. Freelance: 80-120€/hora o precio fijo por entregable. Consultoría: 150€/hora. Mentoría: 100€/sesión. Hablemos y te doy presupuesto exacto.</p>
+                                <summary>¿Cuánto cuesta una web?</summary>
+                                <p>Depende del alcance. Una landing page empieza en ~800€, un sitio web completo en ~1.500€. Te doy precio cerrado tras la llamada de descubrimiento.</p>
                             </details>
                             <details class="faq-item">
-                                <summary>¿Trabajas en remoto?</summary>
-                                <p>100% remoto desde Madrid (CET). Experiencia con equipos distribuidos globales (US, LATAM, EU). Herramientas: Linear, Notion, Slack, Loom, GitHub.</p>
+                                <summary>¿Cuánto tardas en hacer una web?</summary>
+                                <p>Entre 2 y 6 semanas según complejidad. Landing pages: 1-2 semanas. Web completa: 3-6 semanas. Te doy timeline exacto en la propuesta.</p>
                             </details>
                             <details class="faq-item">
-                                <summary>¿Firmas NDA?</summary>
-                                <p>Sí, sin problema. Tengo mi plantilla estándar o firmo la tuya.</p>
+                                <summary>¿Trabajas con contratos?</summary>
+                                <p>Sí. Contrato simple con alcance, entregables, timeline, forma de pago y propiedad intelectual. Protege a los dos.</p>
                             </details>
                             <details class="faq-item">
-                                <summary>¿Qué stack usas por defecto?</summary>
-                                <p>React + TypeScript + Tailwind + Vite/Next.js + Vitest + Playwright + Storybook. Pero me adapto a tu stack actual: Vue, Svelte, Astro, legacy, lo que sea.</p>
+                                <summary>¿Haces el contenido (textos, fotos)?</summary>
+                                <p>Estructuro la web y te guido qué necesito. Los textos finales y fotos los aportas tú (o te recomiendo copywriter/fotógrafo).</p>
                             </details>
                             <details class="faq-item">
-                                <summary>¿Haces solo frontend?</summary>
-                                <p>Frontend es mi especialidad, pero hago full-stack cuando el proyecto lo requiere (Node.js, PostgreSQL, GraphQL, AWS). Para backends complejos, colaboro con backend specialists.</p>
+                                <summary>¿Y si ya tengo hosting/dominio?</summary>
+                                <p>Perfecto. Trabajamos con lo que tengas o te ayudo a elegir lo mejor. Si no tienes, me encargo yo de todo.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>¿Ofreces mantenimiento después?</summary>
+                                <p>Sí. Planes mensuales desde 50€/mes (actualizaciones, backups, seguridad, cambios menores) o por horas sueltas.</p>
                             </details>
                         </div>
                     </aside>
@@ -224,12 +148,22 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Cami Roa. Construido con cuidado.</p>
-            <nav class="footer-nav">
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-            </nav>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Cami Roa</h3>
+                    <p>Diseño y desarrollo web para marcas con algo que decir.</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#services">Servicios</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="about.html">Sobre mí</a>
+                    <a href="contact.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cami Roa. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
@@ -248,7 +182,7 @@
             const data = Object.fromEntries(formData);
 
             // Basic validation
-            if (!data.name || !data.email || !data.subject || !data.message || !data.privacy) {
+            if (!data.name || !data.email || !data.message) {
                 showStatus('Por favor completa todos los campos requeridos.', 'error');
                 return;
             }
@@ -264,7 +198,7 @@
             // Simulate API call
             await new Promise(r => setTimeout(r, 1500));
 
-            // Success (in real app, send to Formspree, Netlify Forms, or your backend)
+            // Success
             showStatus('¡Mensaje enviado! Te responderé en 24-48h.', 'success');
             form.reset();
             setLoading(false);
