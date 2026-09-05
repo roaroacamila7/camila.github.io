@@ -25,291 +25,81 @@
                 <p class="hero-greeting">Mi trabajo</p>
                 <h1 class="hero-name">Proyectos</h1>
                 <p class="hero-description">
-                    Una selección de productos, experimentos y colaboraciones.
-                    Cada uno con sus retos, decisiones técnicas y aprendizajes.
+                    Una selección de proyectos personales y freelance.
+                    Cada uno con su descripción y enlace directo.
                 </p>
             </div>
         </section>
 
-        <section class="section projects-full">
+        <section class="section projects-simple">
             <div class="container">
-                <div class="projects-filters" role="group" aria-label="Filtrar proyectos por categoría">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="saas">SaaS</button>
-                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-                    <button class="filter-btn" data-filter="design-system">Design System</button>
-                    <button class="filter-btn" data-filter="open-source">Open Source</button>
-                </div>
+                <ul class="projects-list">
+                    <li class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-title">Dashboard Analytics</h3>
+                            <p class="project-description">Panel de métricas en tiempo real con gráficos interactivos. React + D3.js + TypeScript.</p>
+                            <span class="project-tag">SaaS</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver proyecto →
+                        </a>
+                    </li>
 
-                <div class="projects-grid-full" id="projects-grid">
-                    <article class="project-card-full" data-category="saas">
-                        <div class="project-image-full" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
-                            <span class="project-badge">Destacado</span>
+                    <li class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-title">Marketplace de Moda</h3>
+                            <p class="project-description">E-commerce multi-vendedor con carrito, pagos Stripe y panel de vendedores. Next.js + Prisma.</p>
+                            <span class="project-tag">E-commerce</span>
                         </div>
-                        <div class="project-content-full">
-                            <div class="project-meta">
-                                <span class="project-tag">SaaS</span>
-                                <span class="project-year">2024</span>
-                            </div>
-                            <h3 class="project-title-full">Analytics Dashboard Pro</h3>
-                            <p class="project-description-full">
-                                Plataforma de business intelligence para equipos de producto.
-                                Visualización en tiempo real, dashboards personalizables, alertas automáticas
-                                y exportación programada. 10k+ usuarios activos diarios.
-                            </p>
-                            <div class="project-challenges">
-                                <h4>Retos principales</h4>
-                                <ul>
-                                    <li>Renderizado eficiente de 50k+ puntos de datos con D3.js + Canvas</li>
-                                    <li>Estado global complejo: migración de Redux a Zustand + React Query</li>
-                                    <li>Accesibilidad en gráficos: patrones, descripciones, navegación por teclado</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech-full">
-                                <span>React 18</span>
-                                <span>TypeScript</span>
-                                <span>D3.js / Canvas</span>
-                                <span>Zustand</span>
-                                <span>React Query</span>
-                                <span>Tailwind</span>
-                                <span>Storybook</span>
-                                <span>Playwright</span>
-                            </div>
-                            <div class="project-links-full">
-                                <a href="#" class="btn btn-primary">Ver caso de estudio</a>
-                                <a href="#" class="btn btn-secondary">Demo interactiva</a>
-                                <a href="#" class="link">GitHub →</a>
-                            </div>
-                            <div class="project-results">
-                                <div class="result"><strong>40%</strong> menos bundle size</div>
-                                <div class="result"><strong>95</strong> Lighthouse perf</div>
-                                <div class="result"><strong>0</strong> a11y violations</div>
-                            </div>
-                        </div>
-                    </article>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver proyecto →
+                        </a>
+                    </li>
 
-                    <article class="project-card-full" data-category="ecommerce">
-                        <div class="project-image-full" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
-                            <span class="project-badge">Cliente</span>
+                    <li class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-title">Aura Design System</h3>
+                            <p class="project-description">Biblioteca de 60+ componentes accesibles con Storybook y tests visuales. React + TypeScript.</p>
+                            <span class="project-tag">Design System</span>
                         </div>
-                        <div class="project-content-full">
-                            <div class="project-meta">
-                                <span class="project-tag">E-commerce</span>
-                                <span class="project-year">2023</span>
-                            </div>
-                            <h3 class="project-title-full">ModaMarket — Marketplace Multi-vendedor</h3>
-                            <p class="project-description-full">
-                                Marketplace completo: catálogo, carrito persistente, checkout Stripe,
-                                panel de vendedor (inventario, pedidos, analytics), sistema de reseñas,
-                                wishlist, comparador. 200+ vendedores onboarding.
-                            </p>
-                            <div class="project-challenges">
-                                <h4>Retos principales</h4>
-                                <ul>
-                                    <li>SSR + ISR en Next.js 13 App Router para SEO crítico</li>
-                                    <li>Pagos complejos: Stripe Connect, splits, webhooks, reembolsos</li>
-                                    <li>Imágenes optimizadas: next/image, blur placeholders, AVIF/WebP</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech-full">
-                                <span>Next.js 13</span>
-                                <span>TypeScript</span>
-                                <span>Prisma</span>
-                                <span>PostgreSQL</span>
-                                <span>Stripe Connect</span>
-                                <span>Tailwind</span>
-                                <span>Vercel</span>
-                                <span>Playwright</span>
-                            </div>
-                            <div class="project-links-full">
-                                <a href="#" class="btn btn-primary">Ver caso de estudio</a>
-                                <a href="#" class="btn btn-secondary">Sitio en producción</a>
-                                <a href="#" class="link">GitHub (privado) →</a>
-                            </div>
-                            <div class="project-results">
-                                <div class="result"><strong>+180%</strong> conversión móvil</div>
-                                <div class="result"><strong>1.2s</strong> LCP</div>
-                                <div class="result"><strong>98</strong> SEO score</div>
-                            </div>
-                        </div>
-                    </article>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver proyecto →
+                        </a>
+                    </li>
 
-                    <article class="project-card-full" data-category="design-system">
-                        <div class="project-image-full" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
-                            <span class="project-badge">Interno</span>
+                    <li class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-title">use-media-query Hook</h3>
+                            <p class="project-description">Hook React ligero (1.2kb) para media queries reactivas. Open source, 2.5k⭐ en GitHub.</p>
+                            <span class="project-tag">Open Source</span>
                         </div>
-                        <div class="project-content-full">
-                            <div class="project-meta">
-                                <span class="project-tag">Design System</span>
-                                <span class="project-year">2023-2024</span>
-                            </div>
-                            <h3 class="project-title-full">Aura Design System</h3>
-                            <p class="project-description-full">
-                                Biblioteca de 60+ componentes accesibles, tokens de diseño multi-plataforma
-                                (web, React Native, Figma), documentación interactiva con Storybook,
-                                tests visuales automatizados, CLI para scaffolding.
-                            </p>
-                            <div class="project-challenges">
-                                <h4>Retos principales</h4>
-                                <ul>
-                                    <li>Tokens transformados via Style Dictionary (Figma → JSON → CSS/TS/Swift)</li>
-                                    <li>Compuestos headless + styled variants (CVA + Tailwind)</li>
-                                    <li>Versionado semántico, changelog automatizado, migración codemods</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech-full">
-                                <span>React</span>
-                                <span>TypeScript</span>
-                                <span>Storybook</span>
-                                <span>Chromatic</span>
-                                <span>Style Dictionary</span>
-                                <span>CVA</span>
-                                <span>Tailwind</span>
-                                <span>Vitest</span>
-                            </div>
-                            <div class="project-links-full">
-                                <a href="#" class="btn btn-primary">Documentación</a>
-                                <a href="#" class="btn btn-secondary">Storybook</a>
-                                <a href="#" class="link">NPM @aura-ds/react →</a>
-                            </div>
-                            <div class="project-results">
-                                <div class="result"><strong>12</strong> productos adoptados</div>
-                                <div class="result"><strong>-60%</strong> dev time UI</div>
-                                <div class="result"><strong>100%</strong> cobertura a11y</div>
-                            </div>
-                        </div>
-                    </article>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver proyecto →
+                        </a>
+                    </li>
 
-                    <article class="project-card-full" data-category="open-source">
-                        <div class="project-image-full" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)">
-                            <span class="project-badge">OSS</span>
+                    <li class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-title">TeamSync</h3>
+                            <p class="project-description">Herramienta async para equipos remotos: check-ins, OKRs, retrospectivas. React + Yjs + WebSockets.</p>
+                            <span class="project-tag">SaaS</span>
                         </div>
-                        <div class="project-content-full">
-                            <div class="project-meta">
-                                <span class="project-tag">Open Source</span>
-                                <span class="project-year">2024</span>
-                            </div>
-                            <h3 class="project-title-full">use-media-query — Hook React</h3>
-                            <p class="project-description-full">
-                                Hook ligero (1.2kb) para media queries reactivas con TypeScript.
-                                Soporte para prefers-reduced-motion, prefers-contrast, prefers-color-scheme.
-                                2.5k+ estrellas en GitHub, usado en 500+ proyectos.
-                            </p>
-                            <div class="project-challenges">
-                                <h4>Retos principales</h4>
-                                <ul>
-                                    <li>SSR seguro: sin hydration mismatch, matchMedia polyfill opcional</li>
-                                    <li>Tree-shaking: ESM + CJS, exports condicionales</li>
-                                    <li>Testing: Vitest + jsdom + happy-dom, 100% cobertura</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech-full">
-                                <span>TypeScript</span>
-                                <span>Vitest</span>
-                                <span>tsup</span>
-                                <span>Changesets</span>
-                                <span>GitHub Actions</span>
-                            </div>
-                            <div class="project-links-full">
-                                <a href="#" class="btn btn-primary">GitHub Repo</a>
-                                <a href="#" class="btn btn-secondary">npm package</a>
-                                <a href="#" class="link">Docs →</a>
-                            </div>
-                            <div class="project-results">
-                                <div class="result"><strong>2.5k</strong> ⭐ GitHub</div>
-                                <div class="result"><strong>15k</strong> descargas/semana</div>
-                                <div class="result"><strong>1.2kb</strong> gzipped</div>
-                            </div>
-                        </div>
-                    </article>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver proyecto →
+                        </a>
+                    </li>
 
-                    <article class="project-card-full" data-category="saas">
-                        <div class="project-image-full" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)">
-                            <span class="project-badge">Cliente</span>
+                    <li class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-title">ArtisanShop Headless</h3>
+                            <p class="project-description">Migración Shopify a headless con Next.js + Storefront API. Checkout personalizado + edge caching.</p>
+                            <span class="project-tag">E-commerce</span>
                         </div>
-                        <div class="project-content-full">
-                            <div class="project-meta">
-                                <span class="project-tag">SaaS</span>
-                                <span class="project-year">2022</span>
-                            </div>
-                            <h3 class="project-title-full">TeamSync — Colaboración Remota</h3>
-                            <p class="project-description-full">
-                                Herramienta async para equipos distribuidos: check-ins diarios,
-                                OKRs, retrospectivas, mood tracking, integración Slack/Linear/GitHub.
-                                Adquirida por empresa mayor en 2023.
-                            </p>
-                            <div class="project-challenges">
-                                <h4>Retos principales</h4>
-                                <ul>
-                                    <li>Real-time: WebSockets + Yjs para edición colaborativa</li>
-                                    <li>Offline-first: IndexedDB + background sync</li>
-                                    <li>Micro-frontends: Module Federation para features aisladas</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech-full">
-                                <span>React</span>
-                                <span>TypeScript</span>
-                                <span>Yjs</span>
-                                <span>WebSockets</span>
-                                <span>IndexedDB</span>
-                                <span>Module Federation</span>
-                                <span>Node.js</span>
-                                <span>PostgreSQL</span>
-                            </div>
-                            <div class="project-links-full">
-                                <a href="#" class="btn btn-primary">Case study</a>
-                                <a href="#" class="link">Artículo técnico →</a>
-                            </div>
-                            <div class="project-results">
-                                <div class="result"><strong>Adquirida</strong> 2023</div>
-                                <div class="result"><strong>50k</strong> usuarios</div>
-                                <div class="result"><strong>99.9%</strong> uptime</div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card-full" data-category="ecommerce">
-                        <div class="project-image-full" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)">
-                        </div>
-                        <div class="project-content-full">
-                            <div class="project-meta">
-                                <span class="project-tag">E-commerce</span>
-                                <span class="project-year">2022</span>
-                            </div>
-                            <h3 class="project-title-full">ArtisanShop — Headless Commerce</h3>
-                            <p class="project-description-full">
-                                Migración de Shopify Liquid a headless: Next.js + Shopify Storefront API.
-                                Personalización total del checkout, suscripciones, bundles dinámicos,
-                                A/B testing nativo, edge caching global.
-                            </p>
-                            <div class="project-challenges">
-                                <h4>Retos principales</h4>
-                                <ul>
-                                    <li>Storefront API: GraphQL optimizado, fragments, variables</li>
-                                    <li>Checkout personalizado: Shopify Checkout Extensions + React</li>
-                                    <li>Edge: Vercel Edge Functions + caching strategies</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech-full">
-                                <span>Next.js</span>
-                                <span>TypeScript</span>
-                                <span>GraphQL</span>
-                                <span>Shopify Storefront</span>
-                                <span>Tailwind</span>
-                                <span>Vercel Edge</span>
-                            </div>
-                            <div class="project-links-full">
-                                <a href="#" class="btn btn-primary">Ver caso de estudio</a>
-                                <a href="#" class="link">Artículo migración →</a>
-                            </div>
-                            <div class="project-results">
-                                <div class="result"><strong>+45%</strong> revenue</div>
-                                <div class="result"><strong>0.8s</strong> LCP</div>
-                                <div class="result"><strong>+32%</strong> AOV</div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver proyecto →
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -334,27 +124,5 @@
             </nav>
         </div>
     </footer>
-
-    <script>
-        // Simple filter functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card-full');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.dataset.filter;
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
