@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cami Roa — Diseño y Desarrollo Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav container">
-            <a href="index.html" class="logo">Cami Roa</a>
+            <a href="index.html" class="logo">Cami<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="about.html">Sobre mí</a></li>
                 <li><a href="projects.html">Proyectos</a></li>
@@ -33,8 +36,27 @@
                         Desde una landing page hasta un sitio web completo, convierto ideas en experiencias digitales que representan tu marca.
                     </p>
                     <div class="hero-actions">
-                        <a href="projects.html" class="btn btn-primary">Ver proyectos</a>
-                        <a href="contact.html" class="btn btn-secondary">Trabajemos juntos</a>
+                        <a href="projects.html" class="btn btn-primary btn-lg">Ver proyectos</a>
+                        <a href="contact.html" class="btn btn-secondary btn-lg">Trabajemos juntos</a>
+                    </div>
+                    <div class="decorative-line"></div>
+                    <div class="stats-bar">
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Años experiencia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">120+</span>
+                            <span class="stat-label">Proyectos entregados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <span class="stat-label">Clientes felices</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Satisfacción</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,14 +76,17 @@
                 </p>
                 <div class="value-grid">
                     <article class="value-card">
+                        <div class="value-icon">🎯</div>
                         <h3 class="value-title">Diseño con intención</h3>
                         <p class="value-description">Cada elemento tiene un propósito: desde la estructura hasta los pequeños detalles visuales.</p>
                     </article>
                     <article class="value-card">
+                        <div class="value-icon">✨</div>
                         <h3 class="value-title">Experiencias simples</h3>
                         <p class="value-description">Creo interfaces claras e intuitivas para que navegar por tu web sea fácil y natural.</p>
                     </article>
                     <article class="value-card">
+                        <div class="value-icon">💫</div>
                         <h3 class="value-title">Tu marca, tu esencia</h3>
                         <p class="value-description">No trabajo con páginas genéricas. Busco que cada proyecto tenga una identidad propia y represente realmente al negocio detrás de él.</p>
                     </article>
@@ -78,21 +103,25 @@
                 <p class="section-subtitle">Ya tienes una idea. Ahora hagamos que cobre vida en internet.</p>
                 <div class="services-grid">
                     <article class="service-card">
+                        <div class="service-icon">🎨</div>
                         <h3 class="service-title">Diseño web</h3>
                         <p class="service-description">Diseño la estructura y la identidad visual de tu sitio para crear una experiencia coherente, moderna y alineada con tu marca.</p>
                         <p class="service-ideal"><strong>Ideal para:</strong> marcas, emprendimientos, profesionales y negocios que quieren mejorar su presencia online.</p>
                     </article>
                     <article class="service-card">
+                        <div class="service-icon">💻</div>
                         <h3 class="service-title">Desarrollo web</h3>
                         <p class="service-description">Transformo el diseño en una página funcional, responsive y preparada para verse correctamente en diferentes dispositivos.</p>
                         <p class="service-ideal">Trabajo con <strong>HTML y CSS</strong>, cuidando tanto la estética como la experiencia de navegación.</p>
                     </article>
                     <article class="service-card">
+                        <div class="service-icon">🎯</div>
                         <h3 class="service-title">Landing pages</h3>
                         <p class="service-description">Una página, un objetivo. Creo landing pages enfocadas en presentar un producto, servicio, proyecto o campaña de forma clara y atractiva.</p>
                         <p class="service-ideal">Perfectas para captar clientes, presentar un lanzamiento o convertir visitas en consultas.</p>
                     </article>
                     <article class="service-card">
+                        <div class="service-icon">🔧</div>
                         <h3 class="service-title">Mantenimiento web</h3>
                         <p class="service-description">Tu página no termina cuando se publica. Puedo ayudarte a mantener tu sitio actualizado, realizar cambios de contenido, corregir detalles y asegurar que siga funcionando correctamente.</p>
                     </article>
@@ -110,6 +139,7 @@
                 <p class="section-subtitle">Diseño, desarrollo y creatividad llevados a proyectos reales y conceptuales. Cada proyecto es una oportunidad para experimentar, resolver problemas y crear algo diferente.</p>
                 <div class="projects-grid">
                     <article class="project-card" data-project="project-1">
+                        <div class="project-card-image"></div>
                         <div class="project-card-body">
                             <h3 class="project-title">Proyecto 01</h3>
                             <p class="project-description">Diseño y desarrollo de una experiencia web pensada para transmitir la identidad de la marca y facilitar la navegación de sus usuarios.</p>
@@ -120,6 +150,7 @@
                         </div>
                     </article>
                     <article class="project-card" data-project="project-2">
+                        <div class="project-card-image"></div>
                         <div class="project-card-body">
                             <h3 class="project-title">Proyecto 02</h3>
                             <p class="project-description">Landing page diseñada para presentar una propuesta de forma clara, visual y estratégica, con foco en captar la atención desde el primer momento.</p>
@@ -130,6 +161,7 @@
                         </div>
                     </article>
                     <article class="project-card" data-project="project-3">
+                        <div class="project-card-image"></div>
                         <div class="project-card-body">
                             <h3 class="project-title">Proyecto 03</h3>
                             <p class="project-description">Sitio web creado para una marca que necesitaba una presencia digital profesional, cercana y alineada con su identidad.</p>
@@ -156,6 +188,9 @@
                         <p>Me gusta prestar atención a los detalles, experimentar con nuevas ideas y encontrar el equilibrio entre <strong>estética, funcionalidad y personalidad</strong>.</p>
                         <p>No quiero crear páginas que se vean como todas las demás. Quiero crear páginas que tengan algo que decir.</p>
                         <a href="about.html" class="btn btn-primary">Conóceme un poco más</a>
+                    </div>
+                    <div class="about-preview-visual">
+                        <div style="aspect-ratio: 4/3; border-radius: var(--radius-xl); background: linear-gradient(135deg, var(--color-cool-blue) 0%, var(--color-wasabi) 100%); display: flex; align-items: center; justify-content: center; font-size: 80px; opacity: 0.3;">🎨</div>
                     </div>
                 </div>
             </div>
