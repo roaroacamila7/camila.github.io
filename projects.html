@@ -26,45 +26,48 @@
     <main>
         <section class="hero hero-page">
             <div class="container">
-                <p class="hero-greeting">PORTFOLIO</p>
-                <h1 class="hero-name">Algunos proyectos</h1>
-                <p class="hero-description">Diseño, desarrollo y creatividad llevados a proyectos reales y conceptuales. Cada proyecto es una oportunidad para experimentar, resolver problemas y crear algo diferente.</p>
+                <p class="hero-greeting">PROYECTOS</p>
+                <h1 class="hero-name">Algunos trabajos</h1>
+                <p class="hero-description">Diseño, desarrollo y creatividad llevados a proyectos reales y conceptuales.</p>
             </div>
         </section>
 
-        <section class="section projects-full">
+        <section class="section">
             <div class="container">
                 <div class="projects-grid">
                     <article class="project-card reveal reveal-delay-1" data-project="project-1">
                         <div class="project-card-image"></div>
                         <div class="project-card-body">
+                            <span class="project-tag">Diseño + Desarrollo</span>
                             <h3 class="project-title">Proyecto 01</h3>
                             <p class="project-description">Diseño y desarrollo de una experiencia web pensada para transmitir la identidad de la marca y facilitar la navegación de sus usuarios.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Diseño web</span>
-                                <span class="project-tag">Desarrollo web</span>
+                                <span>Diseño web</span>
+                                <span>Desarrollo</span>
                             </div>
                         </div>
                     </article>
                     <article class="project-card reveal reveal-delay-2" data-project="project-2">
                         <div class="project-card-image"></div>
                         <div class="project-card-body">
+                            <span class="project-tag">Landing page</span>
                             <h3 class="project-title">Proyecto 02</h3>
-                            <p class="project-description">Landing page diseñada para presentar una propuesta de forma clara, visual y estratégica, con foco en captar la atención desde el primer momento.</p>
+                            <p class="project-description">Landing page diseñada para presentar una propuesta de forma clara, visual y estratégica.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Landing page</span>
-                                <span class="project-tag">Diseño UI</span>
+                                <span>Landing page</span>
+                                <span>UI</span>
                             </div>
                         </div>
                     </article>
                     <article class="project-card reveal reveal-delay-3" data-project="project-3">
                         <div class="project-card-image"></div>
                         <div class="project-card-body">
+                            <span class="project-tag">Sitio web completo</span>
                             <h3 class="project-title">Proyecto 03</h3>
-                            <p class="project-description">Sitio web creado para una marca que necesitaba una presencia digital profesional, cercana y alineada con su identidad.</p>
+                            <p class="project-description">Sitio web creado para una marca que necesitaba una presencia digital profesional y alineada con su identidad.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Diseño web</span>
-                                <span class="project-tag">Desarrollo</span>
+                                <span>Diseño</span>
+                                <span>Desarrollo</span>
                             </div>
                         </div>
                     </article>
@@ -74,18 +77,19 @@
 
         <section class="section cta-section">
             <div class="container">
-                <div class="cta-card reveal">
-                    <h2>¿Tienes un proyecto en mente?</h2>
+                <div class="cta-inner reveal">
+                    <p class="section-eyebrow">¿Hablamos?</p>
+                    <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
                     <p>Me gustan los retos creativos y las marcas con algo que decir.</p>
-                    <a href="contact.html" class="btn btn-primary">Hablemos <span class="btn-icon">↗</span></a>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Hablemos</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Project Modal -->
-    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-        <div class="modal">
+    <!-- Modal -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" hidden>
+        <div class="modal" style="position: relative;">
             <button class="modal-close" id="modal-close" aria-label="Cerrar">×</button>
             <div class="modal-content" id="modal-content"></div>
         </div>
@@ -95,14 +99,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Cami Roa</h3>
+                    <h3>Cami<span>.</span></h3>
                     <p>Diseño y desarrollo web para marcas con algo que decir.</p>
                 </div>
                 <nav class="footer-nav">
                     <a href="index.html">Inicio</a>
-                    <a href="index.html#services">Servicios</a>
-                    <a href="projects.html">Proyectos</a>
                     <a href="about.html">Sobre mí</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="skills.html">Habilidades</a>
                     <a href="contact.html">Contacto</a>
                 </nav>
             </div>
@@ -113,123 +117,6 @@
     </footer>
 
     <script>
-        // Project data for modal
-        const projects = {
-            'project-1': {
-                title: 'Proyecto 01',
-                tag: 'Diseño web · Desarrollo web',
-                description: 'Diseño y desarrollo de una experiencia web pensada para transmitir la identidad de la marca y facilitar la navegación de sus usuarios.',
-                fullDescription: 'Este proyecto consistió en la creación completa de un sitio web corporativo, desde la definición de la arquitectura de información hasta el desarrollo front-end. El objetivo principal era transmitir la esencia de la marca a través de una experiencia visual coherente y una navegación intuitiva.',
-                tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-                links: [
-                    { label: 'Ver proyecto', url: '#', primary: true }
-                ]
-            },
-            'project-2': {
-                title: 'Proyecto 02',
-                tag: 'Landing page · Diseño UI',
-                description: 'Landing page diseñada para presentar una propuesta de forma clara, visual y estratégica, con foco en captar la atención desde el primer momento.',
-                fullDescription: 'Landing page de una sola página optimizada para conversión. Diseño visual impactante, copy estratégico y estructura guiada hacia la acción principal. Totalmente responsive y optimizada para carga rápida.',
-                tech: ['HTML', 'CSS', 'Animaciones CSS', 'Responsive Design'],
-                links: [
-                    { label: 'Ver proyecto', url: '#', primary: true }
-                ]
-            },
-            'project-3': {
-                title: 'Proyecto 03',
-                tag: 'Diseño web · Desarrollo',
-                description: 'Sitio web creado para una marca que necesitaba una presencia digital profesional, cercana y alineada con su identidad.',
-                fullDescription: 'Sitio web multi-página para una marca de servicios. Incluye páginas de servicios, sobre nosotros, blog y contacto. Diseño limpio y profesional con foco en la confianza y cercanía.',
-                tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design', 'Formularios'],
-                links: [
-                    { label: 'Ver proyecto', url: '#', primary: true }
-                ]
-            }
-        };
-
-        // Modal elements
-        const modalOverlay = document.getElementById('project-modal');
-        const modalContent = document.getElementById('modal-content');
-        const modalClose = document.getElementById('modal-close');
-        const projectCards = document.querySelectorAll('.project-card[data-project]');
-
-        // Open modal
-        projectCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const projectId = card.dataset.project;
-                openModal(projectId);
-            });
-
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    const projectId = card.dataset.project;
-                    openModal(projectId);
-                }
-            });
-        });
-
-        // Close modal
-        modalClose.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) closeModal();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modalOverlay.hidden) {
-                closeModal();
-            }
-        });
-
-        function openModal(projectId) {
-            const project = projects[projectId];
-            if (!project) return;
-
-            modalContent.innerHTML = `
-                <header class="modal-header">
-                    <span class="modal-tag">${project.tag}</span>
-                    <h2 id="modal-title">${project.title}</h2>
-                </header>
-                <div class="modal-body">
-                    <p class="modal-description">${project.fullDescription}</p>
-
-                    <section class="modal-section">
-                        <h3>Tecnologías</h3>
-                        <div class="modal-tech">
-                            ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-                        </div>
-                    </section>
-
-                    <section class="modal-section">
-                        <h3>Enlaces</h3>
-                        <div class="modal-links">
-                            ${project.links.map(l => `
-                                <a href="${l.url}" class="modal-link ${l.primary ? 'primary' : 'secondary'}" target="_blank" rel="noopener">
-                                    ${l.label}
-                                </a>
-                            `).join('')}
-                        </div>
-                    </section>
-                </div>
-            `;
-
-            modalOverlay.hidden = false;
-            document.body.style.overflow = 'hidden';
-            modalClose.focus();
-        }
-
-        function closeModal() {
-            modalOverlay.hidden = true;
-            document.body.style.overflow = '';
-        }
-    </script>
-
-    <script>
-        const header = document.querySelector('.header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 60);
-        }, { passive: true });
-
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -240,6 +127,75 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        const projects = {
+            'project-1': {
+                title: 'Proyecto 01',
+                tag: 'Diseño + Desarrollo',
+                fullDescription: 'Diseño y desarrollo de una experiencia web pensada para transmitir la identidad de la marca y facilitar la navegación de sus usuarios.',
+                tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+                links: [{ label: 'Ver proyecto', url: '#', primary: true }]
+            },
+            'project-2': {
+                title: 'Proyecto 02',
+                tag: 'Landing page',
+                fullDescription: 'Landing page diseñada para presentar una propuesta de forma clara, visual y estratégica.',
+                tech: ['HTML', 'CSS', 'Animaciones CSS'],
+                links: [{ label: 'Ver proyecto', url: '#', primary: true }]
+            },
+            'project-3': {
+                title: 'Proyecto 03',
+                tag: 'Sitio web completo',
+                fullDescription: 'Sitio web para una marca que necesitaba una presencia digital profesional y alineada con su identidad.',
+                tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+                links: [{ label: 'Ver proyecto', url: '#', primary: true }]
+            }
+        };
+
+        const modalOverlay = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalClose = document.getElementById('modal-close');
+
+        document.querySelectorAll('.project-card[data-project]').forEach(card => {
+            card.addEventListener('click', () => {
+                const project = projects[card.dataset.project];
+                if (!project) return;
+                modalContent.innerHTML = `
+                    <span class="modal-tag">${project.tag}</span>
+                    <h2 id="modal-title">${project.title}</h2>
+                    <p class="modal-description">${project.fullDescription}</p>
+                    <h3>Tecnologías</h3>
+                    <div class="modal-tech">
+                        ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                    </div>
+                    <div class="modal-links">
+                        ${project.links.map(l => `<a href="${l.url}" class="modal-link ${l.primary ? 'primary' : 'secondary'}" target="_blank">${l.label}</a>`).join('')}
+                    </div>
+                `;
+                modalOverlay.hidden = false;
+                document.body.style.overflow = 'hidden';
+                modalClose.focus();
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modalOverlay.hidden = true;
+            document.body.style.overflow = '';
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modalOverlay.hidden) {
+                modalOverlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+        });
     </script>
 </body>
 </html>
