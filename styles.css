@@ -206,6 +206,8 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-name {
@@ -216,6 +218,8 @@ img { max-width: 100%; display: block; }
   letter-spacing: -3px;
   margin-bottom: 24px;
   color: #111111;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-name .accent {
