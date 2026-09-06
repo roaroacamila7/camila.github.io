@@ -1238,8 +1238,12 @@ img { max-width: 100%; display: block; }
 }
 
 .editorial-icon {
-  font-size: 32px;
-  display: inline-block;
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
   color: var(--topaze);
   animation: spin 4s linear infinite;
