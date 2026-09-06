@@ -1240,12 +1240,32 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--gray-200);
 }
 
-.editorial-num {
-  font-size: 12px;
-  font-weight: 600;
+.editorial-icon {
+  font-size: 32px;
+  display: inline-block;
+  margin-bottom: 16px;
   color: var(--topaze);
-  display: block;
-  margin-bottom: 12px;
+  animation: spin 4s linear infinite;
+}
+
+.editorial-col:nth-child(2) .editorial-icon {
+  color: var(--cool-blue);
+  animation-duration: 5s;
+  animation-direction: reverse;
+}
+
+.editorial-col:nth-child(3) .editorial-icon {
+  color: var(--wasabi);
+  animation-duration: 6s;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-icon { animation: none; }
 }
 
 .editorial-col h3 {
