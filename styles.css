@@ -187,6 +187,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   background: #ffffff;
   padding: 2rem;
+  padding-top: 100px;
   box-sizing: border-box;
 }
 
