@@ -105,7 +105,7 @@
                         <p>Interfaces claras e intuitivas. Navegar por tu web tiene que ser fácil y natural.</p>
                     </div>
                     <div class="editorial-col">
-                        <span class="editorial-icon">❋</span>
+                        <span class="editorial-icon">✿</span>
                         <h3>Tu marca, tu esencia</h3>
                         <p>No trabajo con páginas genéricas. Cada proyecto tiene que tener una identidad propia.</p>
                     </div>
@@ -479,27 +479,4 @@
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modalOverlay.hidden) {
-                modalOverlay.hidden = true;
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Hamburger menu
-        const navToggle = document.getElementById('nav-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            navToggle.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                navToggle.classList.remove('active');
-            });
-        });
-    </script>
-</body>
-</html>
+            if (e.key === 'Esca
