@@ -1253,11 +1253,13 @@ img { max-width: 100%; display: block; }
   color: var(--cool-blue);
   animation-duration: 5s;
   animation-direction: reverse;
+  font-size: 36px;
 }
 
 .editorial-col:nth-child(3) .editorial-icon {
   color: var(--wasabi);
   animation-duration: 6s;
+  font-size: 34px;
 }
 
 @keyframes spin {
