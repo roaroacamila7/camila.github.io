@@ -1253,7 +1253,7 @@ img { max-width: 100%; display: block; }
   color: var(--cool-blue);
   animation-duration: 5s;
   animation-direction: reverse;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .editorial-col:nth-child(3) .editorial-icon {
