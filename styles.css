@@ -1228,7 +1228,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== SERVICES CARDS ===== */
 .services-cards {
-  background: var(--gray-50);
+  background: var(--gray-100);
 }
 
 .sc-header {
@@ -1247,16 +1247,17 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   transition: all 0.25s;
   border: 1px solid var(--gray-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .sc-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   border-color: transparent;
 }
 
 .sc-accent {
-  height: 4px;
+  height: 5px;
   width: 100%;
 }
 
