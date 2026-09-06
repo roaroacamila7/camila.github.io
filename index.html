@@ -479,4 +479,27 @@
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Esca
+            if (e.key === 'Escape' && !modalOverlay.hidden) {
+                modalOverlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Hamburger menu
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
