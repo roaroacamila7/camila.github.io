@@ -88,9 +88,6 @@ img { max-width: 100%; display: block; }
   color: var(--gray-400);
   transition: color 0.2s;
 }
-  color: var(--gray-500);
-  transition: color 0.2s;
-}
 
 .nav-links a:hover,
 .nav-links a.active {
