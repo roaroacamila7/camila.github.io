@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,7 +35,7 @@
         <section class="section contact-full">
             <div class="container">
                 <div class="contact-grid">
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper reveal">
                         <form class="contact-form" id="contact-form" action="#" method="POST">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
@@ -57,7 +58,7 @@
                         <div class="form-status" id="form-status" style="display:none" role="alert" aria-live="polite"></div>
                     </div>
 
-                    <aside class="contact-info">
+                    <aside class="contact-info reveal reveal-delay-2">
                         <div class="info-card">
                             <h3>¿Qué pasa después?</h3>
                             <ol class="process-steps-contact">
@@ -219,6 +220,24 @@
             status.style.display = 'block';
             status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
+    </script>
+
+    <script>
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 </body>
 </html>

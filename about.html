@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,7 +35,7 @@
         <section class="section about-detail">
             <div class="container">
                 <div class="about-detail-grid">
-                    <div class="about-main">
+                    <div class="about-main reveal">
                         <h2 class="section-title">Mi historia</h2>
                         <div class="about-text">
                             <p>Me gusta combinar la parte creativa del diseño con la parte técnica del desarrollo para crear páginas que no solo se vean bien, sino que también tengan sentido.</p>
@@ -74,7 +75,7 @@
                         </div>
                     </div>
 
-                    <aside class="about-sidebar">
+                    <aside class="about-sidebar reveal reveal-delay-2">
                         <div class="sidebar-card">
                             <h3 class="sidebar-title">Qué hago</h3>
                             <ul class="services-list">
@@ -157,5 +158,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
 </body>
 </html>
