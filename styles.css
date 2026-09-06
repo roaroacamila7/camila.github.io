@@ -181,22 +181,22 @@ img { max-width: 100%; display: block; }
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
   background: #ffffff;
+  padding: 2rem;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
   max-width: 800px;
-  padding: 0 24px;
+  width: 100%;
 }
 
 .hero-greeting {
@@ -205,40 +205,34 @@ img { max-width: 100%; display: block; }
   color: var(--topaze);
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  margin-bottom: 24px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 1.5rem;
 }
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(44px, 7vw, 80px);
+  font-size: clamp(36px, 6vw, 72px);
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -3px;
-  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
   color: #111111;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-name .accent {
   font-style: italic;
   color: var(--topaze);
-  letter-spacing: -1px;
 }
 
 .hero-description {
   font-size: 18px;
   color: #555555;
-  max-width: 520px;
   line-height: 1.7;
-  margin: 0 auto 32px;
+  margin-bottom: 2rem;
 }
 
 .hero-actions {
   display: flex;
-  gap: 12px;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -253,8 +247,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   gap: 48px;
   justify-content: center;
-  margin-top: 64px;
-  padding-top: 32px;
+  margin-top: 3rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--border);
 }
 
@@ -1377,9 +1371,9 @@ img { max-width: 100%; display: block; }
 
 /* ===== PAGE HERO ===== */
 .hero-page {
-  min-height: 50vh;
-  padding: 140px 0 80px;
-  align-items: flex-start;
+  height: 50vh;
+  min-height: 400px;
+  padding: 2rem;
   background: #ffffff;
 }
 
