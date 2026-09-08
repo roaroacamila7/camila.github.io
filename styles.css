@@ -1732,7 +1732,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gray-50);
+  background: transparent;
   border-radius: 12px;
   flex-shrink: 0;
   animation: spin 4s linear infinite;
@@ -1770,16 +1770,31 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 100px;
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
   color: var(--gray-700);
   transition: all 0.2s;
 }
 
+.skill-block-lg:nth-child(1) .skill-pill {
+  border-color: var(--topaze);
+  color: var(--topaze);
+}
+
+.skill-block-lg:nth-child(2) .skill-pill {
+  border-color: var(--cool-blue);
+  color: #1a6e99;
+}
+
+.skill-block-lg:nth-child(3) .skill-pill {
+  border-color: var(--wasabi);
+  color: #5a6200;
+}
+
 .skill-pill:hover {
-  background: var(--accent, var(--topaze));
-  border-color: var(--accent, var(--topaze));
-  color: var(--black);
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
 }
 
 /* ===== SKILLS — What I Don't Do ===== */
