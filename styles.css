@@ -1542,9 +1542,15 @@ img { max-width: 100%; display: block; }
 }
 
 .about-value-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 28px;
-  display: block;
   margin-bottom: 16px;
+  background: var(--gray-50);
+  border-radius: 50%;
   animation: spin 4s linear infinite;
 }
 
