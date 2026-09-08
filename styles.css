@@ -1530,7 +1530,7 @@ img { max-width: 100%; display: block; }
 
 .about-value-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: none;
   border-radius: 16px;
   padding: 32px;
   transition: all 0.25s;
@@ -1538,7 +1538,6 @@ img { max-width: 100%; display: block; }
 
 .about-value-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
 }
 
 .about-value-icon {
@@ -1549,8 +1548,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   font-size: 28px;
   margin-bottom: 16px;
-  background: var(--gray-50);
-  border-radius: 50%;
+  color: var(--topaze);
   animation: spin 4s linear infinite;
 }
 
