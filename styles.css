@@ -1795,9 +1795,24 @@ img { max-width: 100%; display: block; }
 }
 
 .skill-pill:hover {
-  background: var(--black);
-  border-color: var(--black);
   color: var(--white);
+}
+
+.skill-block-lg:nth-child(1) .skill-pill:hover {
+  background: var(--topaze);
+  border-color: var(--topaze);
+}
+
+.skill-block-lg:nth-child(2) .skill-pill:hover {
+  background: var(--cool-blue);
+  border-color: var(--cool-blue);
+  color: var(--black);
+}
+
+.skill-block-lg:nth-child(3) .skill-pill:hover {
+  background: var(--wasabi);
+  border-color: var(--wasabi);
+  color: var(--black);
 }
 
 /* ===== SKILLS — What I Don't Do ===== */
