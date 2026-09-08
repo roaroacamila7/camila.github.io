@@ -403,6 +403,7 @@
     </div>
 
     <script>
+        // Scroll reveal
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -414,6 +415,77 @@
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+        // Project modal
+        const projects = {
+            'project-1': {
+                title: 'Proyecto 01',
+                tag: 'Diseño + Desarrollo',
+                fullDescription: 'Diseño y desarrollo de una experiencia web pensada para transmitir la identidad de la marca y facilitar la navegación de sus usuarios.',
+                tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+                links: [{ label: 'Ver proyecto', url: '#', primary: true }]
+            },
+            'project-2': {
+                title: 'Proyecto 02',
+                tag: 'Landing page',
+                fullDescription: 'Landing page diseñada para presentar una propuesta de forma clara, visual y estratégica.',
+                tech: ['HTML', 'CSS', 'Animaciones CSS'],
+                links: [{ label: 'Ver proyecto', url: '#', primary: true }]
+            },
+            'project-3': {
+                title: 'Proyecto 03',
+                tag: 'Sitio web completo',
+                fullDescription: 'Sitio web para una marca que necesitaba una presencia digital profesional y alineada con su identidad.',
+                tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+                links: [{ label: 'Ver proyecto', url: '#', primary: true }]
+            }
+        };
+
+        const modalOverlay = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalClose = document.getElementById('modal-close');
+
+        document.querySelectorAll('.project-card[data-project]').forEach(card => {
+            card.addEventListener('click', () => {
+                const project = projects[card.dataset.project];
+                if (!project) return;
+                modalContent.innerHTML = `
+                    <span class="modal-tag">${project.tag}</span>
+                    <h2 id="modal-title">${project.title}</h2>
+                    <p class="modal-description">${project.fullDescription}</p>
+                    <h3>Tecnologías</h3>
+                    <div class="modal-tech">
+                        ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                    </div>
+                    <div class="modal-links">
+                        ${project.links.map(l => `<a href="${l.url}" class="modal-link ${l.primary ? 'primary' : 'secondary'}" target="_blank">${l.label}</a>`).join('')}
+                    </div>
+                `;
+                modalOverlay.hidden = false;
+                document.body.style.overflow = 'hidden';
+                modalClose.focus();
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modalOverlay.hidden = true;
+            document.body.style.overflow = '';
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modalOverlay.hidden) {
+                modalOverlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Hamburger menu
         const navToggle = document.getElementById('nav-toggle');
         const navLinks = document.getElementById('nav-links');
 
