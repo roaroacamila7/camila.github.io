@@ -1801,12 +1801,13 @@ img { max-width: 100%; display: block; }
 .skill-block-lg:nth-child(1) .skill-pill:hover {
   background: var(--topaze);
   border-color: var(--topaze);
+  color: #8b1a4a;
 }
 
 .skill-block-lg:nth-child(2) .skill-pill:hover {
   background: var(--cool-blue);
   border-color: var(--cool-blue);
-  color: var(--black);
+  color: #1a5a80;
 }
 
 .skill-block-lg:nth-child(3) .skill-pill:hover {
