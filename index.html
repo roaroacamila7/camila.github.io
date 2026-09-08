@@ -403,7 +403,9 @@
     </div>
 
     <script>
-        // Scroll reveal
+        /* ========================================
+           1. SCROLL REVEAL — IntersectionObserver
+           ======================================== */
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -415,7 +417,207 @@
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // Project modal
+        /* ========================================
+           2. HEADER — Solid background on scroll
+           ======================================== */
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            // Add solid background after 50px
+            if (scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 1px 8px rgba(0,0,0,0.06)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+            lastScroll = scrollY;
+        }, { passive: true });
+
+        /* ========================================
+           3. HERO PARALLAX — Subtle scroll effect
+           ======================================== */
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const heroHeight = window.innerHeight;
+                if (scrollY < heroHeight) {
+                    const progress = scrollY / heroHeight;
+                    heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
+                    heroContent.style.opacity = 1 - progress * 0.6;
+                }
+            }, { passive: true });
+        }
+
+        /* ========================================
+           4. CARD TILT — 3D hover effect on cards
+           ======================================== */
+        function initTiltCards(selector) {
+            document.querySelectorAll(selector).forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / centerY * -4;
+                    const rotateY = (x - centerX) / centerX * 4;
+                    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+                    card.style.transition = 'transform 0.4s ease';
+                });
+                card.addEventListener('mouseenter', () => {
+                    card.style.transition = 'transform 0.1s ease';
+                });
+            });
+        }
+        initTiltCards('.sc-card');
+        initTiltCards('.project-card');
+
+        /* ========================================
+           5. MAGNETIC BUTTONS — Follow cursor
+           ======================================== */
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+                btn.style.transition = 'transform 0.3s ease';
+            });
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transition = 'transform 0.1s ease';
+            });
+        });
+
+        /* ========================================
+           6. TEXT SCRAMBLE — On service card hover
+           ======================================== */
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*';
+        function scrambleText(el) {
+            const original = el.dataset.original || el.textContent;
+            el.dataset.original = original;
+            let iteration = 0;
+            const maxIterations = original.length;
+            const interval = setInterval(() => {
+                el.textContent = original.split('').map((char, i) => {
+                    if (i < iteration) return original[i];
+                    return chars[Math.floor(Math.random() * chars.length)];
+                }).join('');
+                iteration += 1 / 2;
+                if (iteration >= maxIterations) {
+                    clearInterval(interval);
+                    el.textContent = original;
+                }
+            }, 30);
+        }
+
+        document.querySelectorAll('.sc-card h3').forEach(h3 => {
+            const card = h3.closest('.sc-card');
+            card.addEventListener('mouseenter', () => scrambleText(h3));
+        });
+
+        /* ========================================
+           7. SMOOTH ANCHOR SCROLL
+           ======================================== */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        /* ========================================
+           8. ACTIVE NAV LINK — Highlight on scroll
+           ======================================== */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }, { passive: true });
+
+        /* ========================================
+           9. COUNTER ANIMATION — Stats on scroll
+           ======================================== */
+        function animateCounters() {
+            document.querySelectorAll('.hero-stat-num').forEach(counter => {
+                if (counter.dataset.animated) return;
+                const target = parseInt(counter.textContent);
+                const suffix = counter.textContent.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = target / 40;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + suffix;
+                    }
+                }, 30);
+                counter.dataset.animated = 'true';
+            });
+        }
+
+        /* ========================================
+           10. CURSOR FOLLOWER — Subtle dot
+           ======================================== */
+        if (window.matchMedia('(pointer: fine)').matches) {
+            const cursor = document.createElement('div');
+            cursor.className = 'cursor-follower';
+            document.body.appendChild(cursor);
+
+            let cursorX = 0, cursorY = 0;
+            let targetX = 0, targetY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                targetX = e.clientX;
+                targetY = e.clientY;
+            });
+
+            function updateCursor() {
+                cursorX += (targetX - cursorX) * 0.12;
+                cursorY += (targetY - cursorY) * 0.12;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                requestAnimationFrame(updateCursor);
+            }
+            updateCursor();
+
+            // Enlarge on interactive elements
+            document.querySelectorAll('a, button, .project-card, .sc-card').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+            });
+        }
+
+        /* ========================================
+           PROJECT MODAL
+           ======================================== */
         const projects = {
             'project-1': {
                 title: 'Proyecto 01',
@@ -485,18 +687,20 @@
             }
         });
 
-        // Hamburger menu
+        /* ========================================
+           HAMBURGER MENU
+           ======================================== */
         const navToggle = document.getElementById('nav-toggle');
-        const navLinks = document.getElementById('nav-links');
+        const navLinksMobile = document.getElementById('nav-links');
 
         navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
+            navLinksMobile.classList.toggle('open');
             navToggle.classList.toggle('active');
         });
 
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
+                navLinksMobile.classList.remove('open');
                 navToggle.classList.remove('active');
             });
         });
