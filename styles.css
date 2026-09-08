@@ -1735,18 +1735,18 @@ img { max-width: 100%; display: block; }
   background: transparent;
   border-radius: 12px;
   flex-shrink: 0;
-  color: var(--topaze);
+  color: var(--topaze) !important;
   animation: spin 4s linear infinite;
 }
 
 .skill-block-lg:nth-child(2) .skill-block-lg-icon {
-  color: var(--cool-blue);
+  color: var(--cool-blue) !important;
   animation-duration: 5s;
   animation-direction: reverse;
 }
 
 .skill-block-lg:nth-child(3) .skill-block-lg-icon {
-  color: var(--wasabi);
+  color: var(--wasabi) !important;
   animation-duration: 6s;
 }
 
